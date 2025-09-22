@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: finbly-frontend
+  description: "An open-source application for personal finance"
+  links:
+    - url: https://github.com/iagouvea07/finbly-frontend
+      title: Repository
+      icon: dashboard
+  annotations:
+    backstage.io/techdocs-ref: dir:.
+    github.com/project-slug: iagouvea07/finbly-frontend
+    github.com/branch: main
+  tags:
+    - nodejs
+spec:
+  type: service
+  owner: admin
+  lifecycle: production
+  dependsOn:
+    - component:iagouvea07/finbly-backend
